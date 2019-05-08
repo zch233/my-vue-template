@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import 'normalize.css/normalize.css'
+import '@/permission' // 全局路由控制
 
 Vue.config.productionTip = false
 
