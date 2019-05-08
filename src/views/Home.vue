@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     {{info}}
+    {{ urll }}
   </div>
 </template>
 
@@ -10,7 +11,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { mapGetters } from 'vuex'
-console.log(process.env)
+
 export default {
   name: 'home',
   computed: {
@@ -18,6 +19,11 @@ export default {
   },
   components: {
     HelloWorld
+  },
+  data() {
+    return {
+      urll: JSON.stringify(process.env)
+    }
   }
 }
 </script>
