@@ -1,5 +1,5 @@
 /**
- * Created by jiachenpan on 16/11/18.
+ * Created by zhangchao on 19/5/8.
  */
 
 export function parseTime (time, cFormat) {
