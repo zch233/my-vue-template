@@ -10,7 +10,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 import { mapGetters } from 'vuex'
-
+console.log(process.env)
 export default {
   name: 'home',
   computed: {
