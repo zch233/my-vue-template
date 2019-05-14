@@ -39,7 +39,17 @@ module.exports = {
         args[0].cdn = cdn
         return args
       })
-    config.plugins.delete('preload') // 删除懒加载模块的 prefetch preload，降低带宽压力
-    config.plugins.delete('prefetch') // 删除懒加载模块的 prefetch preload，降低带宽压力
+    config.when(process.env.NODE_ENV === 'development', // https://webpack.js.org/configuration/devtool/#development
+      config => config.devtool('cheap-source-map')
+    )
+    config.when(process.env.NODE_ENV !== 'development',
+      config => {
+        // 删除预加载
+        config.plugins.delete('preload')
+        config.plugins.delete('prefetch')
+        // 压缩代码
+        config.optimization.minimize(true)
+      }
+    )
   }
 }
