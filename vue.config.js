@@ -3,7 +3,7 @@ const path = require('path')
 
 const cdn = {
   css: [],
-  js: ['http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js']
+  js: []
 }
 
 function resolve (dir) {
