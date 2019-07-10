@@ -87,3 +87,7 @@ export function isChinese (str) { // 帐号是否合法(字母开头，允许5-1
 export function isDecimal (str) { // 是否小数
   return /^\d+\.\d+$/.test(str)
 }
+
+export function isHTML (str) { // 是否html标签
+  return /<(.*)>.*<\/\1>|<(.*) \/>/.test(str)
+}
