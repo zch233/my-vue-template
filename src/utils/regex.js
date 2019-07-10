@@ -107,3 +107,7 @@ export function isIpv4 (str) { // ipv4地址正则
 export function isColor (str) { // 16进制颜色
   return /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(str)
 }
+
+export function isWechat (str) { // 微信号，6至20位，以字母开头，字母，数字，减号，下划线
+  return /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test(str)
+}
