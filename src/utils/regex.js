@@ -80,7 +80,7 @@ export function isAccount (str) { // 帐号是否合法(字母开头，允许5-1
   return /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/.test(str)
 }
 
-export function isChinese (str) { // 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合
+export function isChinese (str) { // 纯中文/汉字
   return /^[\u4E00-\u9FA5]+$/.test(str)
 }
 
@@ -98,4 +98,8 @@ export function isQQ (str) { // 是否qq号格式正确
 
 export function isPassword (str) { // 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
   return /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/.test(str)
+}
+
+export function isIpv4 (str) { // ipv4地址正则
+  return /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str)
 }
