@@ -91,3 +91,11 @@ export function isDecimal (str) { // 是否小数
 export function isHTML (str) { // 是否html标签
   return /<(.*)>.*<\/\1>|<(.*) \/>/.test(str)
 }
+
+export function isQQ (str) { // 是否qq号格式正确
+  return /^[1-9][0-9]{4,10}$/.test(str)
+}
+
+export function isPassword (str) { // 密码强度正则，最少6位，包括至少1个大写字母，1个小写字母，1个数字，1个特殊字符
+  return /^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/.test(str)
+}
