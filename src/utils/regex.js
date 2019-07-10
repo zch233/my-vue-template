@@ -62,3 +62,7 @@ export function isEmail (str) { // email地址
 export function isFixedPhone (str) { // 国内座机电话,如: 0341-86091234
   return /\d{3}-\d{8}|\d{4}-\d{7}/.test(str)
 }
+
+export function isOldIDCard (str) { // 一代身份证号(15位数字)
+  return /^\d{8}(0\d|11|12)([0-2]\d|30|31)\d{3}$/.test(str)
+}
