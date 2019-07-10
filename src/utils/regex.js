@@ -38,3 +38,11 @@ export function isCar (str) { // 车牌号(新能源+非新能源)
 export function isURL (str) { // URL链接(网址)
   return /^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?/.test(str)
 }
+
+export function isStrictPhone (str) { // 手机号(严谨), 根据工信部2019年最新公布的手机号段
+  return /^((https?|ftp|file):\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/\w\.-]*)*\/?/.test(str)
+}
+
+export function isPhone (str) { // 手机号(宽松), 只要是13,14,15,16,17,18,19开头即可
+  return /^1[3-9]\d{9}$/.test(str)
+}
