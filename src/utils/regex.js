@@ -58,3 +58,7 @@ export function isDate (str) { // 日期, 如: 2000-01-01或2000-1-1
 export function isEmail (str) { // email地址
   return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str)
 }
+
+export function isFixedPhone (str) { // 国内座机电话,如: 0341-86091234
+  return /\d{3}-\d{8}|\d{4}-\d{7}/.test(str)
+}
