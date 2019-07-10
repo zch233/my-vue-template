@@ -54,3 +54,7 @@ export function isSimplePhone (str) { // 手机号(最宽松), 只要是1开头�
 export function isDate (str) { // 日期, 如: 2000-01-01或2000-1-1
   return /^\d{4}(-)([0-1][0-2]|\d)\1([0-2]\d|\d|30|31)$/.test(str)
 }
+
+export function isEmail (str) { // email地址
+  return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(str)
+}
