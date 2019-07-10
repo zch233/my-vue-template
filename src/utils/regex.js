@@ -74,3 +74,7 @@ export function isNewIDCard (str) { // 二代身份证号(18位数字),最后一
 export function isIDCard (str) { // 身份证号, 支持1/2代(15位/18位数字)
   return /(^\d{8}(0\d|11|12)([0-2]\d|30|31)\d{3}$)|(^\d{6}(18|19|20)\d{2}(0\d|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$)/.test(str)
 }
+
+export function isAccount (str) { // 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合
+  return /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/.test(str)
+}
