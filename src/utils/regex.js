@@ -61,6 +61,7 @@ export function isEmail (str) { // email地址
 
 export function isFixedPhone (str) { // 国内座机电话,如: 0341-86091234
   return /\d{3}-\d{8}|\d{4}-\d{7}/.test(str)
+  // return /^0\d{2,3}-\d{7,8}$/.test(str)
 }
 
 export function isOldIDCard (str) { // 一代身份证号(15位数字)
@@ -77,4 +78,12 @@ export function isIDCard (str) { // 身份证号, 支持1/2代(15位/18位数字
 
 export function isAccount (str) { // 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合
   return /^[a-zA-Z][a-zA-Z0-9_]{4,15}$/.test(str)
+}
+
+export function isChinese (str) { // 帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线组合
+  return /^[\u4E00-\u9FA5]+$/.test(str)
+}
+
+export function isDecimal (str) { // 是否小数
+  return /^\d+\.\d+$/.test(str)
 }
