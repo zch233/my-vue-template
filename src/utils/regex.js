@@ -66,3 +66,7 @@ export function isFixedPhone (str) { // 国内座机电话,如: 0341-86091234
 export function isOldIDCard (str) { // 一代身份证号(15位数字)
   return /^\d{8}(0\d|11|12)([0-2]\d|30|31)\d{3}$/.test(str)
 }
+
+export function isNewIDCard (str) { // 二代身份证号(18位数字),最后一位是校验位,可能为数字或字符X
+  return /^\d{6}(18|19|20)\d{2}(0\d|11|12)([0-2]\d|30|31)\d{3}(\d|X|x)$/.test(str)
+}
