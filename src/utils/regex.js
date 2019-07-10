@@ -111,3 +111,15 @@ export function isColor (str) { // 16进制颜色
 export function isWechat (str) { // 微信号，6至20位，以字母开头，字母，数字，减号，下划线
   return /^[a-zA-Z]([-_a-zA-Z0-9]{5,19})+$/.test(str)
 }
+
+export function isChinaPost (str) { // 中国邮政编码
+  return /^(0[1-7]|1[0-356]|2[0-7]|3[0-6]|4[0-7]|5[1-7]|6[1-7]|7[0-5]|8[013-6])\d{4}$/.test(str)
+}
+
+export function isImageURL (str) { // 图片链接地址（图片格式可按需增删）
+  return /^https?:\/\/.*?(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif)$/i.test(str)
+}
+
+export function isVideoURL (str) { // 视频链接地址（视频格式可按需增删）
+  return /^https?:\/\/.*?(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4)$/i.test(str)
+}
