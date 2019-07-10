@@ -103,3 +103,7 @@ export function isPassword (str) { // 密码强度正则，最少6位，包括�
 export function isIpv4 (str) { // ipv4地址正则
   return /^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/.test(str)
 }
+
+export function isColor (str) { // 16进制颜色
+  return /^#?([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$/.test(str)
+}
