@@ -50,3 +50,7 @@ export function isPhone (str) { // 手机号(宽松), 只要是13,14,15,16,17,18
 export function isSimplePhone (str) { // 手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条
   return /^1\d{10}$/.test(str)
 }
+
+export function isDate (str) { // 日期, 如: 2000-01-01或2000-1-1
+  return /^\d{4}(-)([0-1][0-2]|\d)\1([0-2]\d|\d|30|31)$/.test(str)
+}
