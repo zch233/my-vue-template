@@ -46,3 +46,7 @@ export function isStrictPhone (str) { // 手机号(严谨), 根据工信部2019�
 export function isPhone (str) { // 手机号(宽松), 只要是13,14,15,16,17,18,19开头即可
   return /^1[3-9]\d{9}$/.test(str)
 }
+
+export function isSimplePhone (str) { // 手机号(最宽松), 只要是1开头即可, 如果你的手机号是用来接收短信, 优先建议选择这一条
+  return /^1\d{10}$/.test(str)
+}
