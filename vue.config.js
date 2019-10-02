@@ -11,7 +11,7 @@ function resolve (dir) {
 }
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? './' : '/', // ./已失效
   outputDir: 'dist',
   assetsDir: 'static',
   productionSourceMap: false,
